@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Spotting & Protection System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="supabaseClient.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">WildlifeSpot</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="report.html">Report Sighting</a></li>
+                <li><a href="view_sightings.html" class="active">View Sightings</a></li>
+                <li><a href="map.html">Map View</a></li>
+                <li><a href="report_illegal.html">Report Illegal Activity</a></li>
+                <li><a href="about.html">About</a></li>
+                <li id="login-register-nav"><a href="login.html">Login/Register</a></li>
+                <li id="profile-nav" style="display: none;"><a href="profile.html">Profile</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-bg.jpg') no-repeat center center/cover; color: #fff; border-radius: 0;">
+            <div class="hero-content">
+                <h1>Explore Wildlife Sightings</h1>
+                <p>Browse through a collection of wildlife sightings reported by our community. Use the filters to find what you're looking for.</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="content-section">
+                <h2>Sightings Gallery</h2>
+                <div class="filter-buttons">
+                    <button id="all-photos" class="btn active">All Photos</button>
+                    <button id="nearby-photos" class="btn">Photos Nearby</button>
+                </div>
+                <div class="gallery" id="gallery">
+                    <!-- Photos will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Wildlife Spotting & Protection System</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <div id="sighting-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modal-image" src="" alt="Sighting Image">
+            <div id="modal-details">
+                <h3 id="modal-species"></h3>
+                <p id="modal-description"></p>
+                <p id="modal-location"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

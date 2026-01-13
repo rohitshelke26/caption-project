@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Spotting & Protection System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="supabaseClient.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">WildlifeSpot</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="report.html">Report Sighting</a></li>
+                <li><a href="view_sightings.html">View Sightings</a></li>
+                <li><a href="map.html">Map View</a></li>
+                <li><a href="report_illegal.html">Report Illegal Activity</a></li>
+                <li><a href="about.html">About</a></li>
+                <li id="login-register-nav"><a href="login.html">Login/Register</a></li>
+                <li id="profile-nav" style="display: none;"><a href="profile.html">Profile</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Protect Our Planet's Wildlife</h1>
+                <p>Your observations can make a world of difference. Report wildlife sightings to fuel conservation efforts and safeguard our natural heritage.</p>
+                <a href="report.html" class="btn">Report a Sighting</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="content-section">
+                <h2>Why It Matters</h2>
+                <p>Wildlife conservation is crucial for maintaining biodiversity and ecological balance. By reporting sightings, you provide valuable data that helps researchers and authorities monitor animal populations, track endangered species, and combat illegal poaching. Every report, big or small, contributes to a larger understanding of our natural world and how we can best protect it.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Wildlife Spotting & Protection System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

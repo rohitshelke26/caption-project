@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Wildlife Spotting</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="supabaseClient.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">WildlifeSpot</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="report.html">Report Sighting</a></li>
+                <li><a href="view_sightings.html">View Sightings</a></li>
+                <li><a href="map.html">Map View</a></li>
+                <li><a href="report_illegal.html">Report Illegal Activity</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li id="login-register-nav"><a href="login.html">Login/Register</a></li>
+                <li id="profile-nav" style="display: none;"><a href="profile.html">Profile</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content-section">
+                <div class="about-content">
+                    <h2>About Our Mission</h2>
+                    <p>The Wildlife Spotting & Protection System is a citizen-science project dedicated to wildlife conservation and awareness. Our platform empowers individuals to become active participants in protecting our planet's biodiversity.</p>
+                    <h3>Citizen Reporting</h3>
+                    <p>By reporting wildlife sightings, you contribute valuable data that helps scientists, researchers, and conservation authorities. This information is crucial for monitoring animal populations, understanding migration patterns, and identifying areas where protection efforts are most needed.</p>
+                    <h3>Wildlife Protection</h3>
+                    <p>The data collected through this platform can be used to inform conservation strategies, protect habitats, and combat illegal activities like poaching and wildlife trafficking. Your reports can be the first line of defense for vulnerable species.</p>
+                    <h3>Raising Awareness</h3>
+                    <p>We believe that awareness is the first step towards conservation. By sharing your sightings and exploring the map, you help create a community of engaged nature enthusiasts who are passionate about protecting our wildlife for future generations.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Wildlife Spotting & Protection System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

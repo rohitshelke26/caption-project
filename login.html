@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register - Wildlife Spotting & Protection System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="supabaseClient.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">WildlifeSpot</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="report.html">Report Sighting</a></li>
+                <li><a href="view_sightings.html">View Sightings</a></li>
+                <li><a href="map.html">Map View</a></li>
+                <li><a href="report_illegal.html">Report Illegal Activity</a></li>
+                <li><a href="about.html">About</a></li>
+                <li id="auth-nav"></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="form-container">
+                <h2 id="form-title">Login</h2>
+
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+
+                <form id="register-form" style="display: none;">
+                    <div class="form-group">
+                        <label for="register-name">Name</label>
+                        <input type="text" id="register-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                </form>
+
+                <p id="auth-message" style="display: none; margin-top: 15px;"></p>
+                <a href="#" id="toggle-form" style="display: block; text-align: center; margin-top: 20px;">Don't have an account? Register here.</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Wildlife Spotting & Protection System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

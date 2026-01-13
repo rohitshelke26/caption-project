@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Wildlife Spotting & Protection System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="supabaseClient.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">WildlifeSpot</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="report.html">Report Sighting</a></li>
+                <li><a href="view_sightings.html">View Sightings</a></li>
+                <li><a href="map.html">Map View</a></li>
+                <li><a href="report_illegal.html">Report Illegal Activity</a></li>
+                <li><a href="about.html">About</a></li>
+                <li id="login-register-nav" style="display: none;"><a href="login.html">Login/Register</a></li>
+                <li id="profile-nav"><a href="profile.html" class="active">Profile</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content-section">
+                <h2>User Profile</h2>
+                <div id="profile-details">
+                    <p><strong>Name:</strong> <span id="profile-name"></span></p>
+                    <p><strong>Email:</strong> <span id="profile-email"></span></p>
+                    <button id="logout-btn" class="btn">Logout</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Wildlife Spotting & Protection System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

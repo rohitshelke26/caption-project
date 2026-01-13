@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Sighting - Wildlife Spotting</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@latest/dist/mobilenet.min.js"></script>
+    <link rel="stylesheet" href="report.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="supabaseClient.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">WildlifeSpot</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="report.html" class="active">Report Sighting</a></li>
+                <li><a href="view_sightings.html">View Sightings</a></li>
+                <li><a href="map.html">Map View</a></li>
+                <li><a href="report_illegal.html">Report Illegal Activity</a></li>
+                <li><a href="about.html">About</a></li>
+                <li id="login-register-nav"><a href="login.html">Login/Register</a></li>
+                <li id="profile-nav" style="display: none;"><a href="profile.html">Profile</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="form-container">
+                <h2>Report a Wildlife Sighting</h2>
+                <p id="success-message" style="display:none; text-align:center; margin-bottom:20px; color: #2c5c3b; font-weight: 600;">Thank you! Your report has been submitted successfully.</p>
+                <form id="sighting-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="species">Animal Species</label>
+                        <input type="text" id="species" name="species" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Short Description</label>
+                        <textarea id="description" name="description" rows="4" placeholder="e.g., Color, size, behavior, location details..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="photo">Upload or Take a Photo</label>
+                        <input type="file" id="photo" name="photo" accept="image/*" required>
+                        <button type="button" class="btn" id="takePhotoBtn" style="margin-top: 10px; background-color: #6c757d;">Take Photo</button>
+                        <button type="button" class="btn" id="previewPhotoBtn" style="margin-top: 10px;">Preview Photo</button>
+                        <p id="model-loading-message" style="display:none; text-align:center; margin-top:10px; color: #6c757d;">Model is loading, please wait a few moments...</p>
+                    </div>
+                    <div id="camera-container" style="display:none; margin-bottom: 15px;">
+                        <video id="camera-stream" width="100%" autoplay></video>
+                        <button type="button" class="btn" id="snapBtn" style="margin-top: 10px;">Snap Photo</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location" placeholder="Latitude, Longitude or click below" required>
+                        <button type="button" class="btn" id="getLocationBtn" style="margin-top: 15px; width: 100%; background-color: #6c757d;">Use My Current Location</button>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Submit Report</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- The Modal -->
+    <div id="previewModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img-preview">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Wildlife Spotting & Protection System</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="report.js"></script>
+</body>
+</html>
